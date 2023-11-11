@@ -27,6 +27,10 @@ Fill signup form
     Fill Text        css=input[name=addressDetails]       ${dog_walker}[details]
 
     Upload File By Selector    css=input[type=file]    ${EXECDIR}/resources/fixtures/${dog_walker}[cnh]
+
+Additional Service
+    [Arguments]        ${additional_service}
+    Click        xpath=//span[text()="${additional_service}"]/..    
     
 Submit signup form
     Click            css=.button-register
